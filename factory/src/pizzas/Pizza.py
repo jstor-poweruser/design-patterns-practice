@@ -10,18 +10,18 @@ class Pizza(ABC):
 
     @property
     @abstractmethod
-    def get_sauce(self):
+    def sauce(self):
         """These are abstract because different kinds of pizzas need different kinds of sauce/dough, but once the subclass defines them I don't want to change them, hence no setters"""
         pass
     
     @property
     @abstractmethod
-    def get_dough(self):
+    def dough(self):
         pass
 
     @property
     @abstractmethod
-    def get_toppings(self):
+    def toppings(self):
         return []
 
     def bake(self):
@@ -34,5 +34,5 @@ class Pizza(ABC):
         print("I'm being put in a box!")
 
     def prepare(self):
-        print(f"Preparing pizza with {self.get_sauce()} and {self.get_dough()}")
-        print(f"Adding toppings such as {(', '.join(self.get_toppings()))}")
+        print(f"Preparing pizza with {self.sauce} and {self.dough}")
+        print(f"Adding toppings such as {(', '.join(self.toppings))}")

@@ -1,6 +1,6 @@
 from pizzas.Pizza import Pizza
 
-class NYStyleCheesePizza(Pizza):
+class NYStylePepperoniPizza(Pizza):
     @property
     def sauce(self):
         return "red sauce"
@@ -11,4 +11,4 @@ class NYStyleCheesePizza(Pizza):
 
     @property
     def toppings(self):
-        return ["big ball of mozzerella cheese"]
+        return ["big ball of mozzerella cheese", "salami"]
